@@ -57,7 +57,9 @@ console.log("Composing Types >>> ", windowState);
 
 if (typeof window !== 'undefined') {
     const element = document.getElementById("typescript");
-    element.innerHTML = "Typescript for Babies";
+    if (element) {
+        element.innerHTML = "Typescript for Babies";
+    }
 }
 
 

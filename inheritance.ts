@@ -1,5 +1,5 @@
 abstract class Animal {
-    name: string;
+    name?: string;
 
     setName(): void {
         this.name = "Test";
@@ -30,8 +30,19 @@ class Cat extends Animal {
     }
 }
 
-const doggy = new Dog();
-doggy.callFromDog();
 
-const cat = new Cat();
-cat.callFromCat();
+
+
+if (typeof window !== 'undefined') {
+
+    const doggy = new Dog();
+    doggy.callFromDog();
+
+    const cat = new Cat();
+    cat.callFromCat();
+
+    const element = document.getElementById("inheritance");
+    if (element) {
+        element.innerHTML = "Typescript inheritance works!";
+    }
+}

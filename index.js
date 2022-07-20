@@ -1,3 +1,4 @@
+"use strict";
 console.log('Hello Nigga');
 // implicit types
 var helloNigga = "Hello, Nigga!";
@@ -31,5 +32,7 @@ var odd = 3;
 console.log("Composing Types >>> ", windowState);
 if (typeof window !== 'undefined') {
     var element = document.getElementById("typescript");
-    element.innerHTML = "Typescript for Babies";
+    if (element) {
+        element.innerHTML = "Typescript for Babies";
+    }
 }

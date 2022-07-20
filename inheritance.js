@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -44,7 +45,13 @@ var Cat = /** @class */ (function (_super) {
     };
     return Cat;
 }(Animal));
-var doggy = new Dog();
-doggy.callFromDog();
-var cat = new Cat();
-cat.callFromCat();
+if (typeof window !== 'undefined') {
+    var doggy = new Dog();
+    doggy.callFromDog();
+    var cat = new Cat();
+    cat.callFromCat();
+    var element = document.getElementById("inheritance");
+    if (element) {
+        element.innerHTML = "Typescript inheritance works!";
+    }
+}
